@@ -1,0 +1,2457 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="apple-touch-icon-precomposed" href="/content/dam/medtronic-com/apple-touch-icon-precomposed.png">
+    <link rel="canonical" href="https://www.medtronic.com/in-en/index.html" />
+    <link rel="icon" type="image/vnd.microsoft.icon" href="./images/favicon.ico">
+
+
+    <title>Medical Technology, Services, and Solutions Global Leader | Medtronic</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/selectize.css" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/bootstrap-select.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./styles/datatables.min.css" />
+    <link rel="stylesheet" type="text/css" href="./styles/jquery.dataTables.min.css" />
+    <link rel="stylesheet" type="text/css" href="./styles/custom.css" />
+    <link rel="stylesheet" href="./styles/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/stylesheet.css" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/responsive.dataTables.min.css" rel="stylesheet">
+
+    <link href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" rel="Stylesheet">
+
+    <style type="text/css">
+        .demo-animals .scientific {
+            font-weight: normal;
+            opacity: 0.3;
+            margin: 0 0 0 2px;
+        }
+
+        .demo-animals .scientific::before {
+            content: '(';
+        }
+
+        .demo-animals .scientific::after {
+            content: ')';
+        }
+    </style>
+    <title>Medtronics</title>
+</head>
+
+<body id="product-list-page">
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+    </div>
+    <div class="d-flex h-100  flex-column" id="main-body">
+        <header class="masthead bg-blue">
+            <div class="inner">
+                <nav class="navbar navbar-light bg-lignt collapse">
+                    <button class="navbar-toggler mr-auto" type="button">
+                        <span class="navbar-toggler-icon my-toggler"></span>
+                        <span class="navbar-toggler-icon my-toggler"></span>
+                        <span class="navbar-toggler-icon my-toggler"></span>
+                    </button>
+
+                </nav>
+                <h3 class="masthead-brand"><a class="navbar-brand" href="#">Medtronic &nbsp;| &nbsp; <span> Unified Product
+                            View</span></a></h3>
+                <div class="btn-group dropdown" id="login-div">
+                    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img src="./images/logged-in-user.png" class="white-img" title="logged-in" width="25px" /><img src="./images/logged-in-user-show.png"
+                            class="blue-img" title="logged-in" width="25px" /><span class="d-none d-md-inline-block"> David Hogan</span>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" x-placement="top-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, -165px, 0px);">
+                        <a class="dropdown-item" href="#">Welcome David!</a>
+
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Log Out</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </header>
+        <main role="main" class="inner-1">
+
+            <div class="lead cover">
+                <div class="demo row" id="search-by-section">
+                    <!-- Default dropup button -->
+                    <div class="col-sm" id="searchbypicker">
+                        <select class="selectpicker col-sm  ">
+                            <option>CFN</option>
+                            <option>GTIN</option>
+                            <option>Product Description</option>
+                        </select>
+                    </div>
+                    <div class="col-sm" id="autocomplete-div">
+                        <div class="control-group col-sm">
+                            <select id="select-gear" class="demo-default" multiple placeholder="Search By CFN">
+                                <option value="">Select...</option>
+                                <optgroup>
+                                    <option value="207F1">207F1</option>
+                                    <option value="207F7">207F7</option>
+                                    <option value="207F2">207F2</option>
+                                    <option value="207F2">207F2</option>
+                                    <option value="208E7">208E7</option>
+                                </optgroup>
+
+                            </select>
+                            <p class="font-size-10-white"> You can select multiple values</p>
+                        </div>
+                        <div class="control-group col-sm" style="display:none;">
+                            <select id="select-gtin" class="demo-default" multiple placeholder="Search By GTIN">
+                                <option value="">Select...</option>
+
+                                <optgroup>
+                                    <option value="12345678">20989898223009</option>
+                                    <option value="123456780">123456780</option>
+                                    <option value="99345678">99345678</option>
+                                </optgroup>
+
+                            </select>
+                            <p class="font-size-10-white"> You can select multiple values</p>
+                        </div>
+                        <div class="control-group col-sm" style="display:none;">
+                            <select id="select-product" class="demo-default" multiple placeholder="Search By Product Description">
+                                <option value="">Select...</option>
+
+                                <optgroup>
+                                    <option value="ENDURANT II STENT GRAFT SYSTEMS">ENDURANT II STENT GRAFT SYSTEMS</option>
+                                    <option value="LigaSure™ Blunt Tip Open and Laparoscopic Sealer/Divider with Nano-coating
+                                                                ">LigaSure™ Blunt Tip
+                                        Open and Laparoscopic Sealer/Divider with Nano-coating
+                                    </option>
+                                    <option value="99345678">Valleylab™ FX8 Energy Platform
+                                    </option>
+                                </optgroup>
+                            </select>
+                            <p class="font-size-10-white"> You can select multiple values</p>
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <button type="button" class="btn btn-primary" id="searchBtn">Search</button>
+                        <div id="loader-image" class="align-items-center" style="position: absolute;top: -9px;right: 0;right: -18px;display: none;">
+                            <div class="align-items-center">
+                                <img src="./images/Spinner-1s-189px.gif" style="  
+                                width: 50px;
+                               " />
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+        <div id="Fliter-by" class="cover">
+            <ul id="Fliter-by-view">
+                <li class="inline-li" style="">
+                    <h2 class="heading-text font-size-16">Fliter By</h2>
+                </li>
+                <li class="inline-li">
+                    <h2 class="heading-text">View:</h2>
+                </li>
+                <li class="inline-li">
+
+                    <div class="multiselect" id="viewbypicker">
+                        <div class="selectBox">
+
+                            <select id="custom_select">
+                                <option value="Select">Select</option>
+                            </select>
+                            <div class="overSelect"></div>
+                        </div>
+                        <div id="checkboxes" class="custom-cbk">
+                            <label for="Active" tabindex="1">
+                                <input type="checkbox" value="Active" id="Active" class="workflow_type checkbox-custom" name="Active" />Active</label>
+                            <label for="Inactive" tabindex="1">
+                                <input type="checkbox" value="Inactive" id="Inactive" class="workflow_type checkbox-custom" name="Inactive" />Inactive</label>
+                            <button type="button" style="display:none" id="get_all_values">Get Values</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="inline-li">
+                    <h2 class="heading-text">SAP Material Type:</h2>
+                </li>
+                <li class="inline-li">
+                    <div id="SMTpicker">
+
+                        <div class="selectBox">
+
+                            <select id="custom_select">
+                                <option>Select</option>
+                            </select>
+                            <div class="overSelect"></div>
+                        </div>
+                        <div id="checkboxes" class="custom-cbk">
+                            
+                            <label for="ZERT" tabindex="1">
+                                <input type="checkbox" value="ZERT - Finished" id="ZERT" class="workflow_type checkbox-custom" name="ZERT" />ZERT - Finished</label>
+                            <label for="HALB" tabindex="1">
+                                <input type="checkbox" value="HALB - Semi-finished" id="HALB" class="workflow_type checkbox-custom" name="HALB" />HALB - Semi-finished</label>
+                                <label for="BHE" tabindex="1">
+                                    <input type="checkbox" value="BHE - Operation Supply" id="BHE" class="workflow_type checkbox-custom" name="BHE" />BHE - Operation Supply</label>
+                            <button type="button" style="display:none" id="get_all_values">Get Values</button>
+                        </div>
+                        <!-- <div id="checkboxes" class="custom-cbk">
+                            <label for="ZERT" tabindex="1">
+                                <input type="checkbox" value="ZERT - Finished" id="ZERT" class="workflow_type checkbox-custom" name="ZERT" />ZERT - Finished</label>
+                            <label for="HALB" tabindex="1">
+                                <input type="checkbox" value="HALB - Semi-finished" id="HALB" class="workflow_type checkbox-custom" name="HALB" />HALB - Semi-finished</label>
+                            <label for="BHE" tabindex="1">
+                                <input type="checkbox" value="BHE - Operation Supply" id="BHE" class="workflow_type checkbox-custom" name="BHE" />BHE
+                                - Operation Supply</label>
+                            <label for="ROH" tabindex="1">
+                                <input type="checkbox" value="ROH - Component, PK/Labeling" id="ROH" class="workflow_type checkbox-custom" name="ROH" />ROH
+                                - Component, PK/Labeling</label> <button type="button" style="display:none" id="get_all_values">Get
+                                Values</button>
+                        </div> -->
+                    </div>
+                </li>
+                <li class="inline-li">
+                    <h2 class="heading-text">Product Status:</h2>
+                </li>
+                <li class="inline-li">
+                    <div id="product-status-picker">
+
+                        <div class="selectBox">
+
+                            <select id="custom_select">
+                                <option>Select</option>
+                            </select>
+                            <div class="overSelect"></div>
+                        </div>
+                        <div id="checkboxes" class="custom-cbk">
+                            <label for="Unapproved" tabindex="1">
+                                <input type="checkbox" value="20 - Unapproved Design" id="Unapproved" class="workflow_type checkbox-custom" name="Unapproved" />
+                                20 - Unapproved Design</label><label for="Approved" tabindex="1">
+                                <input type="checkbox" value="30 - Approved Design" id="Approved" class="workflow_type checkbox-custom" name="Approved" />
+                                30 - Approved Design</label><label for="IntendedPhaseOut" tabindex="1">
+                                <input type="checkbox" value=" 50 - Intended Phase Out" id="IntendedPhaseOut" class="workflow_type checkbox-custom" name="IntendedPhaseOut" />
+                                50 - Intended Phase Out</label><label for="Obsolete" tabindex="1">
+                                <input type="checkbox" value="OB  - Obsolete" id="Obsolete" class="workflow_type checkbox-custom" name="Obsolete" />
+                                OB  - Obsolete</label> <button type="button" style="display:none" id="get_all_values">Get Values</button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <hr style="width:100%;height:1px;border:0;border-bottom: 1px solid #888b8d;margin: 0;padding: 0;">
+        <main role="main" class="inner  cover">
+
+
+
+            <h2 class="heading-text margin-top-0 margin-bottom-15 padding-left-0">PRODUCT LIST</h2>
+            <div class="demo row">
+                <!-- Default dropup button -->
+                <div class="col-sm">
+                    <table id="example" class="display responsive no-wrap" style="width:100%">
+                        <thead>
+                            <tr>
+
+                                <th><input type="checkbox" name="check" class="checkbox-custom" /></th>
+                                <th id="CFN_th">CFN</th>
+                                <th id="GTIN_th">GTIN</th>
+                                <th id="Description_th">Description</th>
+                                <th id="Active_th">Active</th>
+                                <th id="SAP_MT">SAP Material Type</th>
+                                <th id="Prod_status">Product Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="checkbox" name="check" class="checkbox-custom" /></td>
+                                <td>207F1</td>
+                                <td>20989898223009 &nbsp; <img src="./images/go-to.png"  title="open in a new window" style="cursor: pointer;"  class="openProductDetailspageLink"
+                                    /></td>
+                                <td>
+                                    <div class="ellipse-text" title="An ingeniously simple autotransfusion system that delivers high-quality blood consistently, case after case">
+                                        An ingeniously simple autotransfusion system that delivers high-quality blood consistently, case after case
+                                    </div>
+                                </td>
+                                <td>Yes</td>
+                                <td>HALB - Semi-Finished</td>
+                                <td>30 - Approved Design</td>
+                            </tr>
+                            <tr>
+
+                                <td><input type="checkbox" name="check" class="checkbox-custom" /></td>
+                                <td>207F1</td>
+                                <td>20989898223009 &nbsp; <img src="./images/go-to.png"  style="cursor: pointer;"  title="open in a new window"  class="openProductDetailspageLink"
+                                    /></td>
+                                <td>
+                                    <div class="ellipse-text" title="Gives you confidence in targeting accuracy with real-time 3-D ultrasound navigation.1,2">Gives you confidence in targeting accuracy with real-time 3-D ultrasound navigation.1,2
+
+                                    </div>
+
+                                </td>
+                                <td>Yes</td>
+                                <td>ZERT - Finished</td>
+                                <td>30 - Approved Design</td>
+                            </tr>
+                            <tr>
+
+                                <td><input type="checkbox" name="check" class="checkbox-custom" /></td>
+                                <td>207F1</td>
+                                <td>20989898223009 &nbsp; <img src="./images/go-to.png"  style="cursor: pointer;"  title="open in a new window"  class="openProductDetailspageLink"
+                                    /></td>
+                                <td>
+                                    <div class="ellipse-text" title="Gives you confidence in targeting accuracy with real-time 3-D ultrasound navigation.1,2">Gives you confidence in targeting accuracy with real-time 3-D ultrasound navigation.1,2
+
+                                    </div>
+
+                                </td>
+                                <td>Yes</td>
+                                <td>HALB - Semi-Finished</td>
+                                <td>30 - Approved Design</td>
+                            </tr>
+                            <tr>
+
+                                <td><input type="checkbox" name="check" class="checkbox-custom" /></td>
+                                <td>207F1</td>
+                                <td>20989898223009 &nbsp; <img src="./images/go-to.png"  title="open in a new window"  class="openProductDetailspageLink"
+                                    /></td>
+                                <td>
+                                    <div class="ellipse-text" title="Gives you confidence in targeting accuracy with real-time 3-D ultrasound navigation.1,2">Gives you confidence in targeting accuracy with real-time 3-D ultrasound navigation.1,2
+
+                                    </div>
+
+                                </td>
+                                <td>No</td>
+                                <td>HALB - Semi-Finished</td>
+                                <td>30 - Approved Design</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                    <div class="row margin-top-29">
+                        <button type="button" class="btn btn-primary openexportPopup">EXPORT SELECTED</button>
+                        <button type="button" class="btn btn-primary">COMPARE SELECTED</button>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+        </main>
+
+        <footer class="mastfoot mt-auto">
+            <div class="inner">
+                <p>Copyright c 2018 Medtronic, Inc. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+    <!-- Optional JavaScript -->
+
+    <!--add group modal popup-->
+    <div class="modal fade" id="ExportSelectedPopup" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color:#fff;color:#001e46;">
+                    <h4 class="modal-title" id="modalLabel">SELECT THE DATA TO EXPORT</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><img src="./images/close.png" class="close-icon"></span>
+                    </button>
+
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div id="accordion" class="accordion">
+                            <div class="card mb-0">
+                                <div class="card-header collapsed" data-toggle="collapse" href="#collapseOne">
+                                    <a class="card-title">
+                                        Product Information &nbsp; <a href="javascript:void(0);" class="font-size-10-blue collapseOne select-all-link">Select
+                                            All</a><span class="seperator-all-link"> / </span><a href="javascript:void(0);"
+                                            class="font-size-10-blue collapseOne deselect-all-link">Deselect All</a></span>
+                                    </a>
+                                </div>
+                                <div id="collapseOne" class="card-body collapse modal-accordian collapseOne"  >
+                                        <form>
+
+                                                <div class="row border-bottom-grey margin-0">
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        Model Id
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        Model Name
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        Product Name
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        Product Description
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                            
+                                                <div class="row border-bottom-grey margin-0">
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        Registered Name
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        Product Status
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        Product Set Name
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        Combination Product Indicator
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                             
+                                                <div class="row border-bottom-grey margin-0">
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        Product Family Code
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        Product Family Description
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        Product Group Code
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        Product Group Description
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                            
+                                                <div class="row border-bottom-grey  margin-0">
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        Identifier
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        Source
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        Business Division Text
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        Business Unit Identifier
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="row border-bottom-grey margin-0">
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        Full Description
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        Material Height
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        Material Size
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        Material Change Number
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="row border-bottom-grey  margin-0">
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        Labeller Vendor Identifier
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        Division ID
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        Division Name
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        Sub-division ID
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                            
+                                                <div class="row border-bottom-grey margin-0">
+                            
+                            
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        Sub-division Name
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        Regulatory FDA Device Class Code ID
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        Regulatory European Class Code ID
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                            
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        Regulatory European Class Rule ID
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                            
+                            
+                                                <div class="row border-bottom-grey margin-0">
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        Regulatory Material Class Indicator
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        Regulatory Status Date
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        Regulatory Material Description
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                            
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        Regulatory Technical File Number
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                            
+                            
+                                                </div>
+                            
+                                                <div class="row border-bottom-grey margin-0">
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        Material Active
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        Material Type
+                                                      </label>
+                                                    </div>
+                            
+                                                  </div>
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        Material Type Description
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        Material Status Code
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="row border-bottom-grey margin-0">
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        Material Status Description
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        MPG
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                            
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        Base Unit of Measure IDQ
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        Base Unit of Measure Description
+                                                      </label>
+                                                    </div>
+                            
+                                                  </div>
+                                                </div>
+                                                <div class="row border-bottom-grey margin-0">
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        Material Type Description
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        Material Status Code
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        Material Status Description
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        MPG
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="row border-bottom-grey margin-0">
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        Base Unit of Measure ID
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        Base Unit of Measure Description
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        Selling Unit of Measure ID
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        Selling Unit of Measure Description
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="row border-bottom-grey margin-0">
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        Release type
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        Release Type Description
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" style="visibility:hidden;" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        &nbsp;
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" style="visibility:hidden;" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        &nbsp;
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </form>
+                                </div>
+                                <div class="card-header collapsed" data-toggle="collapse"   href="#collapseTwo">
+                                    <a class="card-title">
+                                        Labelling &nbsp; <a href="javascript:void(0);" class="font-size-10-blue collapseOne select-all-link">Select
+                                            All</a><span class="seperator-all-link"> / </span><a href="javascript:void(0);"
+                                            class="font-size-10-blue collapseOne deselect-all-link">Deselect All</a></span>
+
+                                    </a>
+                                </div>
+                                <div id="collapseTwo" class="card-body collapseTwo collapse"  >
+                                        <form>
+
+
+                                                <div class="row border-bottom-grey margin-0">
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        Family Brand Type
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        Family Brand Type Verified
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        Indicator
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        Lot Serial Indicator
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="row border-bottom-grey margin-0">
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        Market Limitation Indicator
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        Manufactured by
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        Medtronic Indicator
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        Distributed by
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="row border-bottom-grey margin-0">
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        Medtronic Indicator
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        Implantable Product Indicator
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        CE Marked Indicator
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        Serial Controlled Indicator
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                            
+                                               
+                                                <div class="row border-bottom-grey margin-0">
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        IFU Paper Language Code
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        IFU Type
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        IFU Type Description
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        IFU Paper Language Code
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="row border-bottom-grey margin-0">
+                            
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        IFU Type Description
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                  <div class="col">
+                                                      <div class="form-check">
+                                                        <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                        <label class="form-check-label" for="defaultCheck1">
+                                                          Country of Origin
+                                                        </label>
+                                                      </div>
+                                                    </div>
+                                                    <div class="col">
+                                                      <div class="form-check">
+                                                        <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                        <label class="form-check-label" for="defaultCheck1">
+                                                          Languages
+                                                        </label>
+                                                      </div>
+                                                    </div>
+                                                    <div class="col">
+                                                      <div class="form-check">
+                                                        <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                        <label class="form-check-label" for="defaultCheck1">
+                                                          For Single Use
+                                                        </label>
+                                                      </div>
+                                                    </div>
+                                                </div>
+                                               
+                                                <div class="row border-bottom-grey margin-0">
+                            
+                                                 
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        Other Market Limitation Code
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                            
+                                              </form>
+                                </div>
+                                <div class="card-header collapsed" data-toggle="collapse"   href="#collapseThree">
+                                    <a class="card-title">
+                                        Addresses &nbsp; <a href="javascript:void(0);" class="font-size-10-blue collapseOne select-all-link">Select
+                                            All</a><span class="seperator-all-link"> / </span><a href="javascript:void(0);"
+                                            class="font-size-10-blue collapseOne deselect-all-link">Deselect All</a></span>
+
+                                    </a>
+                                </div>
+
+                                <div id="collapseThree" class="card-body collapseThree collapse"  >
+                                        <form>
+                                                <div class="row border-bottom-grey">
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        Legal Manufacturers
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        Manufacturing Site
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        Authorised Representative
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                            
+                                                </div>
+                            
+                                              </form>
+                                </div>
+                                <div class="card-header collapsed" data-toggle="collapse"   href="#collapseFour">
+                                    <a class="card-title">
+                                        Licensed Countries &nbsp; <a href="javascript:void(0);" class="font-size-10-white collapseOne select-all-link">Select
+                                            All</a><span class="seperator-all-link"> / </span><a href="javascript:void(0);"
+                                            class="font-size-10-white collapseOne deselect-all-link">Deselect All</a></span>
+
+                                    </a>
+                                </div>
+                                <div id="collapseFour" class="collapse collapseFour card-body"  >
+                                        <form>
+                                                <div class="row border-bottom-grey margin-0">
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        Country Name
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        Nationality Name
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        Abbreviation
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        FDI ID
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="row border-bottom-grey margin-0">
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        EU Language Control Ind.
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        Valid From
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        Valid To
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                            
+                                                  <div class="col">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input checkbox-custom" type="checkbox" value="" id="defaultCheck1">
+                                                      <label class="form-check-label" for="defaultCheck1">
+                                                        Active?
+                            
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                            
+                                                </div>
+                            
+                                              </form>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer" style="border:0px;padding-bottom: 40px;">
+                    <div>
+                        <input class="form-check-input checkbox-custom" style="display:inline-block" type="checkbox" value="" id="export-popup">
+                        <label class="form-check-label" for="export-popup" style="display:inline-block">
+                            Save the selected data for future export
+                        </label>
+                    </div>
+                    <div style="
+                    margin-top: 20px;
+                    margin-left: 0;
+                ">
+                        <button type="submit" class="btn btn btn-primary" onclick="exportToCsv('export.csv', [['name','description']]) " data-dismiss="modal">EXPORT</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">PRODUCT DETAILS</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><img src="./images/close.png" class="close-icon"></span>
+                    </button>
+
+                </div>
+                <div class="modal-body">
+                    <div class="cover">
+                            <main role="main" class="inner-1">
+            
+                                    <div class="row" style="width:100%;">
+                                           <div class="col-sm-4 col-xs-12">
+                                              <p> CFN: 207F1</p> 
+                                              <p> GTIN: 
+                                                <select class="selectpicker col-sm  ">
+                                                        <option>2323245545689</option>
+                                                        <option>2323245545689</option>
+                                                        <option>2323245545687</option>
+                                                      </select>
+                                                      <div id="loader-image" class="align-items-center" style="position: absolute;top: 31px;right: 49%;/* left: 0; */display: none;">
+                                                            <div class="align-items-center">
+                                                                <img src="./images/Spinner-1s-189px.gif" style="  
+                                                                width: 50px;
+                                                               " />
+                                                            </div>
+                                                        
+                                                            </div> 
+                                                    </p> 
+                                           </div>
+                                           <div class="col-sm-8 col-xs-12">
+            <div>
+                    <p>  <b>Description:</b><br/></p>
+                   <p class="foo " title="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                   tempor incididunt ut labore et dolore magna aliqua
+                   Lorem ipsum dolor sit amet, consectetur adipiscing elit"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
+                   </div>
+                                            </div>
+            
+                                        </div>
+                                     
+                                  </main>
+                        <div class="margin-30 text-right margin-right-0 "style="
+                        margin-left: 0;margin-left:20px;margin-bottom:20px;
+                    ">
+                               
+                            <img src="./images/expand_all.png" class="accordion-open" title="Open All" accordion-id="#accordion" style="margin-right:10px;cursor: pointer;"
+                            />
+                            <img src="./images/collapse_all.png" class="accordion-close" title="Close All" style="margin-right:10px;cursor: pointer;"
+                            />
+                            <button type="button" class="btn btn-primary margin-right-0 openexportPopup" id="exportBtn">EXPORT
+                                DATA</button>
+
+                        </div>
+                        <div id="accordion" class="accordion">
+                            <div class="card mb-0" style="border:0;">
+                                <div class="card-header collapsed" data-toggle="collapse" href="#collapsePDOne">
+                                    <a class="card-title">
+                                        Product Details </a>
+                                </div>
+                                <div id="collapsePDOne" class="card-body collapse modal-accordian collapseOne"  >
+                                    <div class="row">
+                                        <div class="col-sm-6 col-xs-12">
+                                            <table class="table table-striped common-table">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col" class="header" colspan="2">MODEL</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Model Id:</th>
+                                                        <td class="text-left">351T</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Model Name:</th>
+                                                        <td class="text-left">ABSORBABLE SUTURES</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <table class="table table-striped common-table">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col" class="header" colspan="2">PRODUCT DETAILS</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold"> <a href="#">
+                                                                <i title="Requirement. Product identifcation, search
+                                                                                    mechanism for associated product data."
+                                                                    class="fas fa-info-circle"></i>
+                                                            </a> Product Name:</th>
+                                                        <td class="text-left">Surgical Ablation Pen</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Product Description:</th>
+                                                        <td class="text-left ellipse-text" title="The Cardioblate XL Surgical Ablation Pen features an extended length monopolar shaft (20 cm) designed for cardiac ablation procedures on difficult-to-access tissue.">The
+                                                            Cardioblate XL Surgical Ablation Pen features an extended length
+                                                            monopolar shaft (20 cm) designed for cardiac ablation procedures
+                                                            on difficult-to-access tissue. </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Registered Name:</th>
+                                                        <td class="text-left">CARDIOBLATE XL SURGICAL ABLATION PEN
+
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Product Status:</th>
+                                                        <td class="text-left">Active</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Product Set Name: </th>
+                                                        <td class="text-left">Ablation Products – Surgical</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Combination Product Indicator:</th>
+                                                        <td class="text-left">Yes</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Product Family Code:</th>
+                                                        <td class="text-left">1001</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Product Family Description:</th>
+                                                        <td class="text-left">MITG - Braided Synthetic Absorbable Sutures</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Product Group Code:</th>
+                                                        <td class="text-left">351T</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Product Group Description:</th>
+                                                        <td class="text-left">MITG - Suture
+
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <table class="table table-striped common-table">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col" class="header" colspan="2">PRODUCT FAMILY DETAILS</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Identifier:</th>
+                                                        <td class="text-left">8886258643-2</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Source:</th>
+                                                        <td class="text-left ellipse-text"> </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Business Division Text:</th>
+                                                        <td class="text-left">CARDIOBLATE XL SURGICAL ABLATION PEN
+
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Business Unit Identifier:</th>
+                                                        <td class="text-left">Active</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Full Description: </th>
+                                                        <td class="text-left">Ablation Products – Surgical</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Material Height:</th>
+                                                        <td class="text-left">12 FT</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Material Size:</th>
+                                                        <td class="text-left">124 SQFT</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">WEEE Material:</th>
+                                                        <td class="text-left">ROHS</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Labeller Vendor Identifier:</th>
+                                                        <td class="text-left">4434</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="col-sm-6 col-xs-12">
+                                            <table class="table table-striped common-table">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col" class="header" colspan="2">DIVISION</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Division Id:</th>
+                                                        <td class="text-left">234</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Division Name:</th>
+                                                        <td class="text-left">Neuromodulation</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Sub-division ID</th>
+                                                        <td class="text-left">401</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Sub-division Name:</th>
+                                                        <td class="text-left">CORE NEURO</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <table class="table table-striped common-table">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col" class="header" colspan="2">REGULATORY DETAILS</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Regulatory FDA Device Class
+                                                            Code ID:</th>
+                                                        <td class="text-left">30575833</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Regulatory European Class
+                                                            Code ID:</th>
+                                                        <td class="text-left">30649871</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Regulatory European Class
+                                                            Rule ID:</th>
+                                                        <td class="text-left">12322232</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Regulatory Material Class
+                                                            Indicator:</th>
+                                                        <td class="text-left">Yes</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Regulatory Status Date:</th>
+                                                        <td class="text-left">11/24/2014</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Regulatory Material Description:</th>
+                                                        <td class="text-left">
+                                                            <P class="foo" style="
+                                                                        max-width: 200px;
+                                                                    ">Sutures</P>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Regulatory Technical File
+                                                            Number:</th>
+                                                        <td class="text-left">12</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <table class="table table-striped common-table">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col" class="header" colspan="2">SAP MATERIAL DETAILS</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Material Active:</th>
+                                                        <td class="text-left">12322232</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Material Type:</th>
+                                                        <td class="text-left">12322232</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Material Type Description:</th>
+                                                        <td class="text-left">MITG - Braided Synthetic Absorbable Sutures</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Material Status Code:</th>
+                                                        <td class="text-left">20 - Approved</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Material Status Description:</th>
+                                                        <td class="text-left">Intended Phase Out</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">MPG:</th>
+                                                        <td class="text-left">RST CARDIOPULMONARY </td>
+                                                    </tr>
+
+                                                </tbody>
+                                            </table>
+                                            <table class="table table-striped common-table">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col" class="header" colspan="2">MISCELLANOUS</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Base Unit of Measure ID:</th>
+                                                        <td class="text-left">12322232</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Base Unit of Measure Description:</th>
+                                                        <td class="text-left">12 mm</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Selling Unit of Measure ID:</th>
+                                                        <td class="text-left">3 mm</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Selling Unit of Measure Description:</th>
+                                                        <td class="text-left">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                                            elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                                                            aliqua</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Release type:</th>
+                                                        <td class="text-left">elitwwe</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Release Type Description:</th>
+                                                        <td class="text-left">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                                            elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                                                            aliqua</td>
+                                                    </tr>
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-header collapsed" data-toggle="collapse"   href="#collapsePDTwo">
+                                    <a class="card-title">
+                                        Labelling
+
+                                    </a>
+                                  
+                                </div>
+                                <div id="collapsePDTwo" class="card-body collapseTwo collapse"  >
+
+                                    <div class="row">
+                                        <div class="col-sm-6 col-xs-12">
+                                            <table class="table table-striped common-table">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col" class="header" colspan="2">INDICATORS DETAILS</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Family Brand Type:</th>
+                                                        <td class="text-left">Trillium Coated Anity Arterial Filter</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Family Brand Type Verified:</th>
+                                                        <td class="text-left">TRILL AFFINITY FILTER</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Indicator:</th>
+                                                        <td class="text-left">Yes</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Lot Serial Indicator:</th>
+                                                        <td class="text-left ellipse-text">No </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Market Limitation Indicator:</th>
+                                                        <td class="text-left">CARDIOBLATE XL SURGICAL ABLATION PEN
+
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Manufactured by:</th>
+                                                        <td class="text-left">Active</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Medtronic Indicator: </th>
+                                                        <td class="text-left">Ablation Products – Surgical</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Distributed by:</th>
+                                                        <td class="text-left">Yes</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Medtronic Indicator:</th>
+                                                        <td class="text-left">Yes</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Implantable Product Indicator:</th>
+                                                        <td class="text-left">Yes</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">CE Marked Indicator:</th>
+                                                        <td class="text-left">No</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Serial Controlled Indicator:</th>
+                                                        <td class="text-left">No</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <table class="table table-striped common-table">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col" class="header" colspan="2">IFU</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">IFU Paper Language Code:</th>
+                                                        <td class="text-left">Lorem</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">IFU Type:</th>
+                                                        <td class="text-left ellipse-text"> Ipsum dolor</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">IFU Type Description:</th>
+                                                        <td class="text-left">Consectetur
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <table class="table table-striped common-table">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col" class="header" colspan="2">MISCELLANOUS</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Country of Origin:</th>
+                                                        <td class="text-left">Finland</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Languages:</th>
+                                                        <td class="text-left">Finnish </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">For Single Use:</th>
+                                                        <td class="text-left">Yes</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Regulatory:</th>
+                                                        <td class="text-left"> T</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Other Market Limitation Code:</th>
+                                                        <td class="text-left">NA </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">NA</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="col-sm-6 col-xs-12">
+                                            <table class="table table-striped common-table">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col" class="header" colspan="2">HAZERDOUS SUBSTANCE INFORMATION</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Country Name:</th>
+                                                        <td class="text-left">Finland</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Technical Document Number:</th>
+                                                        <td class="text-left">NA</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Bisphenol A Indicator:</th>
+                                                        <td class="text-left">No</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Regulatory:</th>
+                                                        <td class="text-left">20 - Approved</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Material Di(2-Ethyl hexyl)</th>
+                                                        <td class="text-left">Intended Phase Out</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Pthalate Indicator::</th>
+                                                        <td class="text-left">RST CARDIOPULMONARY </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Restrictions of Hazardous:</th>
+                                                        <td class="text-left">Intended Phase Out</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Substances Description:</th>
+                                                        <td class="text-left">Polyynthetics polyglycolic acid, polylactic acid, polydioxanone, and caprolactone. </td>
+                                                    </tr>
+
+                                                </tbody>
+                                            </table>
+                                            <table class="table table-striped common-table">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col" class="header" colspan="2">UDI</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">UDI Technical Data:</th>
+                                                        <td class="text-left">B1870</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Not UDI Applicable Indicator:</th>
+                                                        <td class="text-left">Y</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">UDI Relevance Description:</th>
+                                                        <td class="text-left">NA</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Quantity:</th>
+                                                        <td class="text-left">Yes</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Size Type:</th>
+                                                        <td class="text-left">11/24/2014</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Size Unit of Measure:</th>
+                                                        <td class="text-left"> 12mm </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">UDI Unit of Measure:</th>
+                                                        <td class="text-left">12</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Containing Latex:</th>
+                                                        <td class="text-left">No</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Device Not Made with:</th>
+                                                        <td class="text-left">plastic</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Natural Rubber Latex:</th>
+                                                        <td class="text-left">Yes</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Device Packaged as Sterile:</th>
+                                                        <td class="text-left">11/24/2014</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Special Storage Condition:</th>
+                                                        <td class="text-left"> cold sotrage -70 C </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">MRI Safety Information:</th>
+                                                        <td class="text-left">12</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Device Packaged as Sterile:</th>
+                                                        <td class="text-left"> LOrem Ipsum </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Sterilization Method:</th>
+                                                        <td class="text-left">12</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-right font-weight-bold">Battery Component:</th>
+                                                        <td class="text-left">12</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div id="label-artwork-download" style="margin:0;margin-bottom:30px;margin-top:30px;width:100%;">
+                                        <h2 class="text-center" style="color:white;font-size:16px;font-weight:bold;margin-bottom:10px;margin-top: 10px;">Label
+                                            Artwork Downloads:</h2>
+                                        <div class="cover row" style="
+                                  width: 74%;
+                                  padding: 0px;
+                                  margin-top: 0;
+                              ">
+                                            <div class="col-sm-4 col-xs-12">
+                                                <img src="./images/download.png" class="download-img" title="IFU (Instructions for Use) ">                                                IFU
+                                                (Instructions for Use)
+                                            </div>
+                                            <div class="col-sm-4 col-xs-12">
+                                                <img src="./images/download.png" class="download-img" title="PIC (Patient Implant Card)">                                                PIC
+                                                (Patient Implant Card)
+                                            </div>
+                                            <div class="col-sm-4 col-xs-12">
+                                                <img src="./images/download.png" class="download-img" title="PIIL (Patient Implant Info. Lea et)">                                                PIIL
+                                                (Patient Implant Info. Lea et)
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card-header collapsed" data-toggle="collapse"   href="#collapsePDThree">
+                                    <a class="card-title">
+                                        Addresses </a>
+                                </div>
+
+                                <div id="collapsePDThree" class="card-body collapseThree collapse"  >
+                                    <div class="cover row">
+                                        <div class="col-sm-4 col-xs-12">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h4>LEGAL MANUFACTURER</h4>
+                                                    <b> Medtronic CryoPath LP</b> <br/>
+                                                    <p> 9000, AutoRoute, Transcanadienne, <br/> Pointe-Claire, Quebec, H9R
+                                                        5ZB <br/> Canada <br/>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4 col-xs-12">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h4>MANUFACTURING SITE</h4>
+                                                    <b> Medtronic CryoPath LP</b> <br/>
+                                                    <p> 9000, AutoRoute, Transcanadienne, <br/> Pointe-Claire, Quebec, H9R
+                                                        5ZB <br/> Canada <br/>
+                                                    </p>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-sm-4 col-xs-12">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h4>AUTHORISED REPRESENTATIVE</h4>
+                                                    <b> Medtronic CryoPath LP</b> <br/>
+                                                    <p> Earl Bakkenstraat 10 6422 PJ Heerlan The Netherlands Tel: 31-45-566-8000
+                                                        <br/>
+                                                    </p>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="card-header collapsed" data-toggle="collapse"   href="#collapsePDFour">
+                                    <a class="card-title">
+                                        Licensed Countries </a>
+                                </div>
+                                <div id="collapsePDFour" class="collapse collapseFour card-body"  >
+                                    <h4 style="
+                                    margin-left: 53px;
+                                "> Licensed Country List</h4>
+                                    <div class="table-responsive-sm">
+                                        <table id="examplePD" class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Country Name</th>
+                                                    <th scope="col">Nationality Name</th>
+                                                    <th scope="col">Abbreviation</th>
+                                                    <th scope="col">EU Language Control Ind.</th>
+                                                    <th scope="col">Valid From</th>
+                                                    <th scope="col">Valid To</th>
+                                                    <th scope="col">Active?</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">Finland</th>
+                                                    <td>Finnish</td>
+                                                    <td> </td>
+                                                    <td>Yes</td>
+                                                    <td>11/24/2014</td>
+                                                    <td>11/24/2021</td>
+                                                    <td>Yes</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Finland</th>
+                                                    <td>Finnish</td>
+                                                    <td> </td>
+                                                    <td>Yes</td>
+                                                    <td>11/24/2014</td>
+                                                    <td>11/24/2021</td>
+                                                    <td>Yes</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Finland</th>
+                                                    <td>Finnish</td>
+                                                    <td> </td>
+                                                    <td>Yes</td>
+                                                    <td>11/24/2014</td>
+                                                    <td>11/24/2021</td>
+                                                    <td>Yes</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Finland</th>
+                                                    <td>Finnish</td>
+                                                    <td> </td>
+                                                    <td>Yes</td>
+                                                    <td>11/24/2014</td>
+                                                    <td>11/24/2021</td>
+                                                    <td>Yes</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Finland</th>
+                                                    <td>Finnish</td>
+                                                    <td> </td>
+                                                    <td>Yes</td>
+                                                    <td>11/24/2014</td>
+                                                    <td>11/24/2021</td>
+                                                    <td>Yes</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Finland</th>
+                                                    <td>Finnish</td>
+                                                    <td> </td>
+                                                    <td>Yes</td>
+                                                    <td>11/24/2014</td>
+                                                    <td>11/24/2021</td>
+                                                    <td>Yes</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>   
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="./js/jquery-3.4.1.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
+    <script type="text/javascript" src="./js/datatables.min.js"></script>
+    <script src="./js/selectize.js"></script>
+
+    <script>
+        // Firefox 1.0+
+ isFirefox = typeof InstallTrigger !== 'undefined';
+console.log(isFirefox)
+console.log("isFirefox")
+        $('#select-gear').selectize({
+            sortField: 'text'
+        });
+
+        $(function () {
+
+            $(".custom-cbk input").on('click',function(){
+               // console.log($(this).val());
+                if($(this).is(":checked")){
+                $(this).parent().parent().parent().find('select option:selected').val($(this).val());
+                $(this).parent().parent().parent().find('select option:selected').html($(this).val());
+            }
+            else{
+
+                $(this).parent().parent().parent().find('select option:selected').val("Select");
+                $(this).parent().parent().parent().find('select option:selected').html("Select");
+            }
+            });
+
+ $('body').click( function() {
+       
+       $('#content').hide();
+       
+   });
+
+            $("#searchBtn").click(function () {
+                document.getElementById("loader-image").style.display = 'inline-block';
+                setTimeout(function () { document.getElementById("loader-image").style.display = 'none'; }, 2000);
+            })
+            $('#select-gear').selectize({
+                sortField: 'text',
+                onChange: function (value) {
+                    if ($(".selectize-input.items.focus").find(".item").length > 0) {
+                        document.getElementById("searchBtn").disabled = false;
+                    }
+                    else {
+                        document.getElementById("searchBtn").disabled = true;
+                    }
+                }
+            });
+            $('#select-product').selectize({
+                sortField: 'text',
+                onChange: function (value) {
+                    if ($(".selectize-input.items.focus").find(".item").length > 0) {
+                        document.getElementById("searchBtn").disabled = false;
+                    }
+                    else {
+                        document.getElementById("searchBtn").disabled = true;
+                    }
+                }
+            });
+            $('#select-gtin').selectize({
+                sortField: 'text',
+                onChange: function (value) {
+                    if ($(".selectize-input.items.focus").find(".item").length > 0) {
+                        document.getElementById("searchBtn").disabled = false;
+                    }
+                    else {
+                        document.getElementById("searchBtn").disabled = true;
+                    }
+                }
+            });
+
+            $('.selectpicker').on('changed.bs.select', function (e, clickedIndex, isSelected, previousValue) {
+                $(".control-group.col-sm").css('display', 'none  ');
+                if (clickedIndex == 0) {
+                    $('#select-gear').parent().css('display', 'inline-block')
+                }
+                if (clickedIndex == 1) {
+                    $('#select-gtin').parent().css('display', 'inline-block');
+                }
+                if (clickedIndex == 2) {
+
+                    $('#select-product').parent().css('display', 'inline-block')
+                }
+
+            });
+            //select box open or hide...
+            var expanded = false;
+            $('.selectBox').on('click', function () {
+            //  window.alert('hi');
+                $(".custom-cbk").css('display', 'none');
+                if (!expanded) {
+                    $(this).addClass('open');
+                    $(this).parent().find("#checkboxes").css('display', 'block');
+                    if(isFirefox === false){
+               $(this).parent().find("#checkboxes label:first-child").focus();//other browsers
+                    }
+                    else if(isFirefox === true){
+
+                $(this).parent().find("#checkboxes").find("input")[0].focus();//firefox
+                    }
+                
+            $(document.activeElement).parent().addClass('checked_label')
+         //       $(this).parent().find("#checkboxes").find("input")[0].parent().addClass(checked_label);
+              //console.log(document.activeElement)
+                    // $(this).parent().find("#checkboxes").find(".workflow_type.checkbox-custom")[0].focus();
+                    //        $(this).parent().find("#checkboxes").find(".checkbox-custom")[0].focus()
+                    // $('input[name^=program]')[0].focus();
+                    expanded = true;
+                } else {
+                    $(this).parent().find("#checkboxes").css('display', 'none');
+                    expanded = false;
+
+                    $(this).removeClass('open');
+                }
+            })
+
+/* $(".custom-cbk").keydown(function(e) {
+ //console.log('step1' + document.activeElement)
+    if (e.keyCode == 13) { // enter
+       
+       // $(this).find("input").prev().focus();
+       var focused = document.activeElement;
+      console.log($(focused).find("input").is(":checked"));
+       
+        if ($(focused).find("input").is(":checked")) {
+            $(focused).find("input").prop('checked', false);
+
+                $(this).parent().find('select option:selected').val("Select");
+                $(this).parent().find('select option:selected').html("Select");
+                
+             } else {
+            $(focused).find("input[type='checkbox']").prop('checked', true);
+            $(this).parent().find('select option:selected').val($(focused).find("input").val());
+                $(this).parent().find('select option:selected').html($(focused).find("input").val());
+       
+        }
+      
+    }
+    if (e.keyCode == 38) { // up
+        if(document.activeElement.previousElementSibling != null){
+            document.activeElement.previousElementSibling.focus();
+        }
+        else{
+            return;
+        }
+            //$(this).find("label").prev().focus();
+            
+      
+    }
+    if (e.keyCode == 40) { // down
+        if(document.activeElement.nextElementSibling != null){
+            document.activeElement.nextElementSibling.focus()
+        }
+    
+    }
+}); */
+
+if(isFirefox === true){
+    
+$(".custom-cbk").keydown(function(e) {
+ //console.log('step1' + document.activeElement)
+
+            $(document.activeElement).parent().addClass('checked_label')
+    if (e.keyCode == 13) { // enter
+       
+       // $(this).find("input").prev().focus();
+       var focused = document.activeElement;
+     // console.log($(this).parent().find('select option:selected'));
+       
+        if ($(document.activeElement).is(":checked")) {
+            $(document.activeElement).prop('checked', false);
+
+                $(this).parent().find('select option:selected').val("Select");
+                $(this).parent().find('select option:selected').html("Select");
+                $(document.activeElement).parent().removeClass('checked_label')
+                
+                
+             } else {
+            $(document.activeElement).prop('checked', true);
+            var myval = $(document.activeElement).prop('value');
+            $(this).parent().find('select option:selected').val(myval);
+                $(this).parent().find('select option:selected').html(myval);
+
+                $(document.activeElement).parent().addClass('checked_label')
+       
+        }
+      
+    }
+    if (e.keyCode == 38) { // up
+
+            $('.checked_label').removeClass('checked_label')
+            $(document.activeElement).parent().prev('label').addClass('checked_label')
+        if( $(document.activeElement).parent().prev('label').find("input").length > 0){
+            $(document.activeElement).parent().prev('label').find("input").focus();
+        }
+        else{
+            return;
+        }
+            //$(this).find("label").prev().focus();
+            
+      
+    }
+    if (e.keyCode == 40) { // down
+         
+        $('.checked_label').removeClass('checked_label')
+            $(document.activeElement).parent().next('label').addClass('checked_label')
+        //$(focused).next().focus()
+        if($(document.activeElement).parent().next('label').find("input").length > 0){
+            $(document.activeElement).parent().next('label').find("input").focus();
+        }
+    
+    }
+});
+}
+if(isFirefox === false){
+    console.log('not firefox')
+    $(".custom-cbk").keydown(function(e) {
+ //console.log('step1' + document.activeElement)
+    if (e.keyCode == 13) { // enter
+       
+       // $(this).find("input").prev().focus();
+       var focused = document.activeElement;
+      console.log($(focused).find("input").is(":checked"));
+       
+        if ($(focused).find("input").is(":checked")) {
+            $(focused).find("input").prop('checked', false);
+
+                $(this).parent().find('select option:selected').val("Select");
+                $(this).parent().find('select option:selected').html("Select");
+                
+             } else {
+            $(focused).find("input[type='checkbox']").prop('checked', true);
+            $(this).parent().find('select option:selected').val($(focused).find("input").val());
+                $(this).parent().find('select option:selected').html($(focused).find("input").val());
+       
+        }
+      
+    }
+    if (e.keyCode == 38) { // up
+        if(document.activeElement.previousElementSibling != null){
+            document.activeElement.previousElementSibling.focus();
+        }
+        else{
+            return;
+        }
+            //$(this).find("label").prev().focus();
+            
+      
+    }
+    if (e.keyCode == 40) { // down
+        if(document.activeElement.nextElementSibling != null){
+            document.activeElement.nextElementSibling.focus()
+        }
+    
+    }
+}); 
+}
+
+
+
+            //Close outside clicked...
+            $(document).mouseup(function (e) {
+                var container = $(".selectBox");
+
+                // if the target of the click isn't the container nor a descendant of the container
+                if (!container.is(e.target) && container.has(e.target).length === 0) {
+                    $(".custom-cbk").hide();
+                   $(".selectBox.open").removeClass('open');
+                }
+            });
+//             $('body').click( function(e) {
+       
+//                 var container = $(".selectBox");
+
+// // if the target of the click isn't the container nor a descendant of the container
+// if (!container.is(e.target) && container.has(e.target).length === 0) {
+//     console.log('hi');
+//     $("#checkboxes").hide();
+//     $(".selectBox.open").removeClass('open');
+// }
+       
+//    });
+            $('.ellipse-text').tooltip()
+
+            $('#example').DataTable({
+                "paging": true,
+                "ordering": true,
+                "info": false,
+                "bFilter": false,
+                "sorting": true,
+                "asStripeClasses": [],
+                responsive: true,
+                order: [],
+                "dom": '<"top"i>rt<"bottom"flp><"clear">',
+                "aoColumnDefs": [
+                    { "bSortable": false, "aTargets": [0] }
+                ],
+                language: {
+                    paginate: {
+                        next: '<img src="./images/arrow-next.png" width="12px" />',
+                        previous: '<img src="./images/arrow-prev.png"  width="12px" >',
+                    },
+                },
+                "drawCallback": function (settings) {
+                    $('.ellipse-text').tooltip();
+                    $('#example_length').addClass('selectBox');
+                },
+
+            });
+
+$('#examplePD').DataTable( {
+        "paging":   true,
+        "ordering": false,
+        "info":     false,
+        "bFilter": false ,
+        "sorting": false,
+    responsive: true,
+        "dom": '<"top"i>rt<"bottom"flp><"clear">',
+    language: {
+    paginate: {
+      next: '<img src="./images/arrow-next.png" width="12px" />',
+      previous: '<img src="./images/arrow-prev.png"  width="12px" >',
+    },
+  },
+     "drawCallback": function( settings ) {
+      $('.ellipse-text').tooltip();
+      $('#example_length select').selectpicker('refresh');
+     // .replace('data-','')
+     // $('#example_length label').text()
+    $('#example_length label').text().replace("entries", "hello everyone"); 
+  
+    //  $('#example_length label').prepend(' ');
+       },
+    
+    } );
+
+            var table = $('#example').DataTable();
+            $('#example tbody').on('click', 'tr', function () {
+                window.open('./product-details.html', '_self');
+              
+            });
+
+            $('.openProductDetailspageLink').on('click', function (ev) {
+                /* $('#ExportSelectedPopup').modal({
+                     show: true
+                 });*/
+                window.open('./product-details.html', '_blank');
+            });
+            //{"classes": {"ui-tooltip": "my-custom-class-name", "ui-tooltip-content": "my-custom-class-name-content"}
+
+            $('.openexportPopup').on('click', function (ev) {
+                $('#ExportSelectedPopup').modal({
+                    show: true
+                });
+            $("#exampleModal").css('z-index','999'); 
+
+            });
+
+
+            //select All
+            $(".select-all-link").click(function (e) {
+                e.stopPropagation();
+                var strid = $(this).parent().attr('href');
+                str_id = strid.substring(1);
+
+                console.log(str_id);
+                $(strid).find('.checkbox-custom').prop('checked', true);
+            });
+
+            $(".deselect-all-link").click(function (e) {
+                e.stopPropagation();
+                var strid = $(this).parent().attr('href');
+                $(strid).find('.checkbox-custom').prop('checked', false);
+            });
+            var table = $('#example').DataTable();
+
+            $('#example tbody').on('click', 'tr', function () {
+                $(this).toggleClass('selected');
+                if ($(this).hasClass('selected')) {
+                    $(this).find('[type="checkbox"]').prop('checked', true);
+                }
+                else {
+                    $(this).find('[type="checkbox"]').prop('checked', false);
+                }
+
+            });
+
+            $("#example tbody").on('change', '.checkbox-custom', function () {
+                //$(this).toggleClass('selected');
+
+                if (this.checked) {
+                    $(this).closest('tr').addClass('selected')
+                }
+                else {
+                    $(this).closest('tr').removeClass('selected')
+                }
+                /*  
+                     if($(this).hasClass('selected')){
+                      $(this).find('[type="checkbox"]').prop('checked',true);
+                     }
+                     else{
+                      $(this).find('[type="checkbox"]').prop('checked', false);
+                     }*/
+
+            });
+            $("#example thead").on('change', '.checkbox-custom', function () {
+
+                //$(this).toggleClass('selected');
+                if (this.checked) {
+                    $("#example tbody tr").addClass('selected')
+                    $("#example tbody tr").find('[type="checkbox"]').prop('checked', true);
+                }
+                else {
+                    $("#example tbody tr").removeClass('selected')
+                    $("#example tbody tr").find('[type="checkbox"]').prop('checked', false);
+                }
+
+            });
+            $('#button').click(function () {
+                alert(table.rows('.selected').data().length + ' row(s) selected');
+            });
+            // $("#accordion").on('show.bs.collapse', function () {
+            //   $(".select-all-link, .deselect-all-link").show();
+            //  })
+
+            //Checkbox onclick show text on right side...
+            $(".workflow_type").click(function () {
+                var selected_workflow_type = [];
+                var label_text = $(this).parent().text().trim();
+                selected_workflow_type.push(label_text);
+                $('#get_all_values').click();
+            });
+            $('#get_all_values').on('click', function () {
+                var workflow_types = [];
+                $.each($("input[name='workflow_type_name']:checked"), function () {
+                    workflow_types.push($(this).parent().text().trim());
+                });
+                //alert("My workflow types are: " + workflow_types.join(", "));
+                $('#selected_workflow').html(workflow_types.join(", "));
+            })
+
+  $(".accordion-open").on("click", function() {
+    $(".card-body").removeClass("collapse").removeClass('show');
+    $(".card-header").removeClass("collapsed");
+   
+  })
+  $(".accordion-close").on("click", function() {  
+      $(".card-body").addClass("collapse").removeClass('show');
+    $(".card-header").addClass("collapsed");
+  })
+
+
+
+  $('#example_length select').first
+
+
+        })// doc ready 
+
+        function exportToCsv(filename, rows) {
+            console.log('hello');
+            var processRow = function (row) {
+                var finalVal = '';
+                for (var j = 0; j < row.length; j++) {
+                    var innerValue = row[j] === null ? '' : row[j].toString();
+                    if (row[j] instanceof Date) {
+                        innerValue = row[j].toLocaleString();
+                    };
+                    var result = innerValue.replace(/"/g, '""');
+                    if (result.search(/("|,|\n)/g) >= 0)
+                        result = '"' + result + '"';
+                    if (j > 0)
+                        finalVal += ',';
+                    finalVal += result;
+                }
+                return finalVal + '\n';
+            };
+
+            var csvFile = '';
+            for (var i = 0; i < rows.length; i++) {
+                csvFile += processRow(rows[i]);
+            }
+
+            var blob = new Blob([csvFile], { type: 'text/csv;charset=utf-8;' });
+            if (navigator.msSaveBlob) { // IE 10+
+                navigator.msSaveBlob(blob, filename);
+            } else {
+                var link = document.createElement("a");
+                if (link.download !== undefined) { // feature detection
+                    // Browsers that support HTML5 download attribute
+                    var url = URL.createObjectURL(blob);
+                    link.setAttribute("href", url);
+                    link.setAttribute("download", filename);
+                    link.style.visibility = 'hidden';
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                }
+            }
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>
